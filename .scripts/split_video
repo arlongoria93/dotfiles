@@ -1,0 +1,14 @@
+#!/bin/bash
+
+file=$1
+total_sec=$2
+
+start=0
+i=1
+
+while [ $start -le $total_sec ] 
+do
+	ffmpeg -i $file -ss $start -t 30 part${i}.mp4
+	start=$((start+=30))
+	i=$((i+=1))
+done

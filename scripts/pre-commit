@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+git diff --cached --name-status | grep -v '^D' | grep '.cpp\|.h' | sed 's/[A-Z][ \t]*//' | xargs astyle --indent=spaces=2 --style=google -n | grep '^Formatted' | sed 's/Formatted[ \t]//' | xargs git add
+

@@ -1,0 +1,54 @@
+env:
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 6
+    y: 6
+  title: Alacritty
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+scrolling:
+  history: 5000
+
+font:
+  normal:
+    family: MonoLisa
+    style: Regular
+  bold:
+    family: MonoLisa
+    style: Bold
+  italic:
+    family: MonoLisa
+    style: Italic
+  bold_italic:
+    family: MonoLisa
+    style: Bold Italic
+  size: 15.0
+  offset:
+    x: 0
+    y: 1
+
+draw_bold_text_with_bright_colors: true
+
+background_opacity: 1.0
+
+key_bindings:
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Insert, mods: Shift, action: PasteSelection }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Plus, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: Paste, action: Paste }
+  - { key: Copy, action: Copy }
+  - { key: L, mods: Control, action: ClearLogNotice }
+  - { key: L, mods: Control, chars: "\x0c" }
+  - { key: PageUp, mods: Shift, action: ScrollPageUp, mode: ~Alt }
+  - { key: PageDown, mods: Shift, action: ScrollPageDown, mode: ~Alt }
+  - { key: Home, mods: Shift, action: ScrollToTop, mode: ~Alt }
+  - { key: End, mods: Shift, action: ScrollToBottom, mode: ~Alt }
